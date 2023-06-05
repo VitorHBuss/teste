@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Cadastro de Cliente</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:outputLabel for="itCodigo" value="Código"/>
+            <p:inputText id="itCodigo" value="#{clienteBean.cliente.codigo}" readonly="true"/><br/>
+            <p:outputLabel for ="itNome" value="Nome"/>
+            <p:inputText id="itNome" value="#{clienteBean.cliente.nome}"/><br/>
+            <p:outputLabel for="itCep" value="CEP"/>
+            <p:inputText id="itCep" value="#{clienteBean.cliente.cep}"/><br/>
+            <p:outputLabel for="itRua" value="Rua"/>
+            <p:inputText id="itRua" value="#{clienteBean.cliente.rua}"/><br/>
+            <p:outputLabel for ="itBairro" value="Bairro"/>
+            <p:inputText id="itBairro" value="#{clienteBean.cliente.bairro}"/><br/>
+            <p:outputLabel for ="itNumero" value="Número"/>
+            <p:inputText id="itNumero" value="#{clienteBean.cliente.numero}"/><br/>
+            <p:outputLabel for ="itComplemento" value="Complemento"/>
+            <p:inputText id="itComplemento" value="#{clienteBean.cliente.complemento}"/><br/>
+            <p:outputLabel for ="itCidade" value="Cidade"/>
+            <p:inputText id="itCidade" value="#{clienteBean.cliente.cidade}"/><br/>
+            <p:outputLabel for ="itEstado" value="Estado"/>
+            <p:inputText id="itEstado" value="#{clienteBean.cliente.estado}"/><br/>
+            <p:outputLabel for ="itTelefone" value="Telefone"/>
+            <p:inputText id="itTelefone" value="#{clienteBean.cliente.telefone}"/><br/>
+            <p:outputLabel for ="itCpf" value="CPF"/>
+            <p:inputText id="itCpf" value="#{clienteBean.cliente.cpf}"/><br/>
+            <p:outputLabel for ="itRg" value="RG"/>
+            <p:inputText id="itRg" value="#{clienteBean.cliente.rg}"/><br/>
+            <p:commandButton icon="pi pi-save" ajax="false" action="#{clienteBean.salva()}"/>
+        </h:form>
+        <h:form>
+            <p:commandButton icon="pi pi-undo" action="index"/>
+        </h:form>
+    </h:body>
+</html>

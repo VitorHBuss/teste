@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Produtos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <body>
+        <h:form>
+<p:commandButton id="bVoltar" icon="pi pi-undo" action="index" value="Voltar"/>
+<p:tooltip id="ttVoltar" for="bVoltar" value="Voltar" trackMouse="true"/>
+        <h1>Produtos</h1>
+        <aside>
+          <div class="box">
+            <header>Resumo da compra</header>
+            <tbody>
+            <tr class="cart-product">
+                <td class="product-identification">
+                    <strong class="cart-prod-title">Pão de Queijo</strong>
+                </td>
+                <td>
+                    <span class="cart-prod-price">R$10,00</span>
+                </td>
+                <td>
+                    <input type="number" value="2" class="product-qtd-input"/>
+                    <button type="button" class="remove-product-button">Remover</button>
+                </td>
+            </tr>
+            </tbody>
+            <div class="info">
+              <div><span>Sub-total</span><span>R$ 418</span></div>
+              <div><span>Frete</span><span>Gratuito</span></div>
+              <div>
+                <button>
+                  Adicionar cupom de desconto
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
+            </div>
+            <footer>
+              <span>Total</span>
+              <span>R$ 418</span>
+            </footer>
+          </div>
+            <button onclick="FiCo()" type="button" class="FinalizarCompra">Finalizar Compra</button>
+        </aside>
+        <h2>Pães</h2>
+        <fieldset>
+                <img src="https://www.estadao.com.br/resizer/lxbiR0rd29amDzHCxmo_ncAoOkY=/1200x1200/filters:format(jpg):quality(80):focal(322x158:332x168)/cloudfront-us-east-1.images.arcpublishing.com/estadao/UTQSVI4V4RHN7C6BDLZXD67YLE.jpg" alt="1" height="150px" width="150px"/>
+                <div class="prod">
+                <strong class="nomeprod">Pão de Queijo</strong><br/>
+                <h:outputText value="Feito de Queijo"/><br/>
+                <span class="precoprod">R$10,00</span><br/>
+                <button type="button" class="add">Adicionar ao carrinho</button>
+                </div>
+        </fieldset>
+        <div class="prod2">
+        <fieldset>
+                <img src="https://www.estadao.com.br/resizer/lxbiR0rd29amDzHCxmo_ncAoOkY=/1200x1200/filters:format(jpg):quality(80):focal(322x158:332x168)/cloudfront-us-east-1.images.arcpublishing.com/estadao/UTQSVI4V4RHN7C6BDLZXD67YLE.jpg" alt="1" height="150px" width="150px"/>
+                <strong class="nomeprod">Pão de Queijo</strong><br/>
+                <h:outputText value="Feito de Queijo"/><br/>
+                <span class="precoprod">R$10,00</span><br/>
+                <button type="button" class="add">Adicionar ao carrinho</button>
+        </fieldset>
+            </div>
+        <h2>Salgados</h2>
+        <h2>Frios</h2>
+        <h2>Bolos e Tortas</h2>
+        <h2>Bebidas</h2>
+        </h:form>
+       
+            <script>
+                var url = document.URL;
+                document.getElementById("url").innerHTML = "URL: " + str;
+                function FiCo(){
+                    if(window.confirm("Compra finalizada com sucesso!")){
+                        window.location.href="http://localhost:8080/Padaria/";
+                    }
+                }
+                
+            </script>
+        
+        <style>
+            .prod2{
+                position: relative;
+                left: 15em;
+            }
+            .prod{
+                position: relative;
+                left:9em;
+                bottom:5em;
+                font-size:1.2em;
+            }
+            fieldset{
+                margin-right: 70em;
+            }
+            h1{
+                text-align: center;
+            }
+            .add{
+                position: relative;
+                top: 4em;
+                right: 5em;
+            }
+            aside {
+  margin-left: 1015px;
+}
+
+aside .box {
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  background: #eee;
+  color: #222;
+}
+
+aside .box header {
+  padding: 5px 2px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+aside .box .info {
+  padding: 20px;
+  font-size: 16px;
+}
+
+aside .box .info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+aside .box .info > div:last-child {
+  margin: 0;
+}
+
+aside .box .info button {
+  color: #28a745;
+  background: transparent;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+aside .box footer {
+  padding: 5px 2px;
+  background: #ddd;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+aside > button {
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  background: #28a745;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+aside > button:hover {
+  background: #3bc55b;
+}
+body > main .content aside {
+  min-width: 250px;
+}
+        </style>
+    </body>
+</html>
